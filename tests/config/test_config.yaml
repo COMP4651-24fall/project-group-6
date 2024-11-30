@@ -1,0 +1,16 @@
+deployments:
+  openfaas:
+    name: "OpenFaaS"
+    endpoint_url: "http://gateway.openfaas.svc.cluster.local:8080/function/phone-price-predictor"
+    headers: {}
+
+  traditional:
+    name: "Traditional"
+    endpoint_url: "http://localhost:5000/predict"
+    headers: {}
+
+test_parameters:
+  requests_per_round: 100
+  max_workers: 10
+  test_rounds: 3
+  timeout: 30
